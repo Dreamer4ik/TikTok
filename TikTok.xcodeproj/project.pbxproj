@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFC17EDB281158A500209669 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFC17EDA281158A500209669 /* GoogleService-Info.plist */; };
 		DFCDD2882810728600D9E8A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2872810728600D9E8A6 /* AppDelegate.swift */; };
 		DFCDD28A2810728600D9E8A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */; };
-		DFCDD28C2810728600D9E8A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD28B2810728600D9E8A6 /* ViewController.swift */; };
+		DFCDD28C2810728600D9E8A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD28B2810728600D9E8A6 /* HomeViewController.swift */; };
 		DFCDD2912810728800D9E8A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCDD2902810728800D9E8A6 /* Assets.xcassets */; };
 		DFCDD2942810728800D9E8A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCDD2922810728800D9E8A6 /* LaunchScreen.storyboard */; };
+		DFCDD2A42810792000D9E8A6 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2A32810792000D9E8A6 /* ExploreViewController.swift */; };
+		DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2A52810794200D9E8A6 /* CameraViewController.swift */; };
+		DFCDD2A82810796800D9E8A6 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2A72810796800D9E8A6 /* NotificationsViewController.swift */; };
+		DFCDD2AA2810798E00D9E8A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2A92810798E00D9E8A6 /* ProfileViewController.swift */; };
+		DFCDD2AC281079C100D9E8A6 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2AB281079C100D9E8A6 /* UserListViewController.swift */; };
+		DFCDD2AE281079E700D9E8A6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2AD281079E700D9E8A6 /* SignInViewController.swift */; };
+		DFCDD2B0281079F700D9E8A6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */; };
+		DFCDD2B228107A1900D9E8A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */; };
+		DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B328107A7D00D9E8A6 /* TabBarViewController.swift */; };
+		DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */; };
+		DFCDD2BA28107B2F00D9E8A6 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */; };
+		DFCDD2BC28107B7B00D9E8A6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */; };
+		DFCDD2BE28107BB200D9E8A6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */; };
+		DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */; };
+		DFCDD2C228107C6600D9E8A6 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */; };
+		F7330DA525D86B6F2FB8BC95 /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1FEB9BC8512EBD568A21F2 /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
+		566E58D4CE918A323AE74D1F /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
+		57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC17EDA281158A500209669 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DFCDD2842810728600D9E8A6 /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCDD2872810728600D9E8A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFCDD28B2810728600D9E8A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFCDD28B2810728600D9E8A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFCDD2902810728800D9E8A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFCDD2932810728800D9E8A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFCDD2952810728800D9E8A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFCDD2A32810792000D9E8A6 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		DFCDD2A52810794200D9E8A6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		DFCDD2A72810796800D9E8A6 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		DFCDD2A92810798E00D9E8A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DFCDD2AB281079C100D9E8A6 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		DFCDD2AD281079E700D9E8A6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DFCDD2B328107A7D00D9E8A6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7330DA525D86B6F2FB8BC95 /* Pods_TikTok.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +77,8 @@
 			children = (
 				DFCDD2862810728600D9E8A6 /* TikTok */,
 				DFCDD2852810728600D9E8A6 /* Products */,
+				E13746417DC671A6DC940418 /* Pods */,
+				E2BC843B90D6275E5631D973 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +93,127 @@
 		DFCDD2862810728600D9E8A6 /* TikTok */ = {
 			isa = PBXGroup;
 			children = (
-				DFCDD2872810728600D9E8A6 /* AppDelegate.swift */,
-				DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */,
-				DFCDD28B2810728600D9E8A6 /* ViewController.swift */,
-				DFCDD2902810728800D9E8A6 /* Assets.xcassets */,
-				DFCDD2922810728800D9E8A6 /* LaunchScreen.storyboard */,
+				DFCDD2A02810786000D9E8A6 /* Managers */,
+				DFCDD29F2810783700D9E8A6 /* ViewModels */,
+				DFCDD29E2810782300D9E8A6 /* Models */,
+				DFCDD29D2810780F00D9E8A6 /* Views */,
+				DFCDD29C281077F300D9E8A6 /* Controllers */,
+				DFCDD29B281077BF00D9E8A6 /* Resources */,
 				DFCDD2952810728800D9E8A6 /* Info.plist */,
 			);
 			path = TikTok;
+			sourceTree = "<group>";
+		};
+		DFCDD29B281077BF00D9E8A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2902810728800D9E8A6 /* Assets.xcassets */,
+				DFC17EDA281158A500209669 /* GoogleService-Info.plist */,
+				DFCDD2872810728600D9E8A6 /* AppDelegate.swift */,
+				DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DFCDD29C281077F300D9E8A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2A2281078F500D9E8A6 /* Other */,
+				DFCDD2A1281078DC00D9E8A6 /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DFCDD29D2810780F00D9E8A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2B628107AD300D9E8A6 /* Other */,
+				DFCDD2B528107ABD00D9E8A6 /* Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFCDD29E2810782300D9E8A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFCDD29F2810783700D9E8A6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DFCDD2A02810786000D9E8A6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */,
+				DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */,
+				DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */,
+				DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */,
+				DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DFCDD2A1281078DC00D9E8A6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD28B2810728600D9E8A6 /* HomeViewController.swift */,
+				DFCDD2A32810792000D9E8A6 /* ExploreViewController.swift */,
+				DFCDD2A52810794200D9E8A6 /* CameraViewController.swift */,
+				DFCDD2A72810796800D9E8A6 /* NotificationsViewController.swift */,
+				DFCDD2A92810798E00D9E8A6 /* ProfileViewController.swift */,
+				DFCDD2B328107A7D00D9E8A6 /* TabBarViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DFCDD2A2281078F500D9E8A6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2AB281079C100D9E8A6 /* UserListViewController.swift */,
+				DFCDD2AD281079E700D9E8A6 /* SignInViewController.swift */,
+				DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */,
+				DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */,
+				DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DFCDD2B528107ABD00D9E8A6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2922810728800D9E8A6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DFCDD2B628107AD300D9E8A6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E13746417DC671A6DC940418 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FEB9BC8512EBD568A21F2 /* Pods-TikTok.debug.xcconfig */,
+				566E58D4CE918A323AE74D1F /* Pods-TikTok.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2BC843B90D6275E5631D973 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCDD2982810728800D9E8A6 /* Build configuration list for PBXNativeTarget "TikTok" */;
 			buildPhases = (
+				3F22CFD88F99DC922FCD1D94 /* [CP] Check Pods Manifest.lock */,
 				DFCDD2802810728600D9E8A6 /* Sources */,
 				DFCDD2812810728600D9E8A6 /* Frameworks */,
 				DFCDD2822810728600D9E8A6 /* Resources */,
+				9889A2DD537B1D068C15FAF9 /* [CP] Embed Pods Frameworks */,
+				DFC17EDC28115D0A00209669 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,17 +279,92 @@
 			files = (
 				DFCDD2942810728800D9E8A6 /* LaunchScreen.storyboard in Resources */,
 				DFCDD2912810728800D9E8A6 /* Assets.xcassets in Resources */,
+				DFC17EDB281158A500209669 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F22CFD88F99DC922FCD1D94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikTok-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9889A2DD537B1D068C15FAF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC17EDC28115D0A00209669 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFCDD2802810728600D9E8A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFCDD28C2810728600D9E8A6 /* ViewController.swift in Sources */,
+				DFCDD2C228107C6600D9E8A6 /* HapticsManager.swift in Sources */,
+				DFCDD2BE28107BB200D9E8A6 /* DatabaseManager.swift in Sources */,
+				DFCDD2A42810792000D9E8A6 /* ExploreViewController.swift in Sources */,
+				DFCDD2AC281079C100D9E8A6 /* UserListViewController.swift in Sources */,
+				DFCDD2B228107A1900D9E8A6 /* SettingsViewController.swift in Sources */,
+				DFCDD2BA28107B2F00D9E8A6 /* APICaller.swift in Sources */,
+				DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */,
+				DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */,
+				DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */,
+				DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */,
+				DFCDD28C2810728600D9E8A6 /* HomeViewController.swift in Sources */,
+				DFCDD2B0281079F700D9E8A6 /* SignUpViewController.swift in Sources */,
+				DFCDD2A82810796800D9E8A6 /* NotificationsViewController.swift in Sources */,
+				DFCDD2AE281079E700D9E8A6 /* SignInViewController.swift in Sources */,
+				DFCDD2AA2810798E00D9E8A6 /* ProfileViewController.swift in Sources */,
+				DFCDD2BC28107B7B00D9E8A6 /* StorageManager.swift in Sources */,
 				DFCDD2882810728600D9E8A6 /* AppDelegate.swift in Sources */,
 				DFCDD28A2810728600D9E8A6 /* SceneDelegate.swift in Sources */,
 			);
@@ -270,6 +500,7 @@
 		};
 		DFCDD2992810728800D9E8A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1FEB9BC8512EBD568A21F2 /* Pods-TikTok.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -300,6 +531,7 @@
 		};
 		DFCDD29A2810728800D9E8A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 566E58D4CE918A323AE74D1F /* Pods-TikTok.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
