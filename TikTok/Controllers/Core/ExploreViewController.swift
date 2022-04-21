@@ -13,9 +13,9 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .red
+        
     }
-    
-
   
 
 }
+
