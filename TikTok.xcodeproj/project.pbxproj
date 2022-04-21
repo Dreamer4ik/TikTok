@@ -23,7 +23,6 @@
 		DFCDD2B228107A1900D9E8A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */; };
 		DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B328107A7D00D9E8A6 /* TabBarViewController.swift */; };
 		DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */; };
-		DFCDD2BA28107B2F00D9E8A6 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */; };
 		DFCDD2BC28107B7B00D9E8A6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */; };
 		DFCDD2BE28107BB200D9E8A6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */; };
 		DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */; };
@@ -53,7 +52,6 @@
 		DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DFCDD2B328107A7D00D9E8A6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -150,11 +148,10 @@
 		DFCDD2A02810786000D9E8A6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				DFCDD2B928107B2F00D9E8A6 /* APICaller.swift */,
 				DFCDD2BD28107BB200D9E8A6 /* DatabaseManager.swift */,
 				DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */,
-				DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */,
 				DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */,
+				DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				DFCDD2A42810792000D9E8A6 /* ExploreViewController.swift in Sources */,
 				DFCDD2AC281079C100D9E8A6 /* UserListViewController.swift in Sources */,
 				DFCDD2B228107A1900D9E8A6 /* SettingsViewController.swift in Sources */,
-				DFCDD2BA28107B2F00D9E8A6 /* APICaller.swift in Sources */,
 				DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */,
 				DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */,
 				DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */,
