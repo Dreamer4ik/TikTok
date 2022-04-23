@@ -6,5 +6,5 @@
 - Posting Videos
 - Notifications
 - Profiles
-- More...
+- Animation
 
