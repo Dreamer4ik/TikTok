@@ -195,7 +195,7 @@ extension HomeViewController: PostViewControllerDelegate {
     func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel) {
         horizontalScrollView.isScrollEnabled = false
         if horizontalScrollView.contentOffset.x == 0 {
-            // follwoing
+            // following
             followingPageViewController.dataSource = nil
         } else {
             forYouPageViewController.dataSource = nil
