@@ -211,7 +211,31 @@ extension HomeViewController: PostViewControllerDelegate {
             vc.view.frame = CGRect(x: 0, y: self.view.height - frame.height, width: frame.width, height: frame.height)
         }
     }
-
+    
+    func postViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel) {
+        let user = post.user
+        let vc = ProfileViewController(user: user)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didTapFollowButton(_ vc: PostViewController, didTapFollowButtonFor post: PostModel, button: UIButton) {
+        button.isEnabled = false
+        UIView.transition(with: button, duration: 0.3, options: .transitionCrossDissolve) {
+            button.setBackgroundImage(UIImage(named: "success"), for: .disabled)
+        } completion: { done in
+            if done {
+                button.rotate()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    UIView.animate(withDuration: 0.3) {
+                        button.alpha = 0
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    
 }
 
 extension HomeViewController: CommentsViewControllerDelegate {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF50A7B42815BB50004D07BD /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF50A7B32815BB50004D07BD /* video.mp4 */; };
 		DF6C2B66281556240033E395 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C2B65281556240033E395 /* CommentTableViewCell.swift */; };
 		DF8BD2432814574F005C2C99 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD2422814574E005C2C99 /* CommentsViewController.swift */; };
 		DF8BD24528146690005C2C99 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD24428146690005C2C99 /* PostComment.swift */; };
@@ -40,6 +41,7 @@
 		3E1FEB9BC8512EBD568A21F2 /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
 		566E58D4CE918A323AE74D1F /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
 		57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF50A7B32815BB50004D07BD /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		DF6C2B65281556240033E395 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		DF8BD2422814574E005C2C99 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		DF8BD24428146690005C2C99 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCDD2902810728800D9E8A6 /* Assets.xcassets */,
+				DF50A7B32815BB50004D07BD /* video.mp4 */,
 				DFC17EDA281158A500209669 /* GoogleService-Info.plist */,
 				DFCDD2872810728600D9E8A6 /* AppDelegate.swift */,
 				DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */,
@@ -295,6 +298,7 @@
 				DFCDD2942810728800D9E8A6 /* LaunchScreen.storyboard in Resources */,
 				DFCDD2912810728800D9E8A6 /* Assets.xcassets in Resources */,
 				DFC17EDB281158A500209669 /* GoogleService-Info.plist in Resources */,
+				DF50A7B42815BB50004D07BD /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,3 +51,15 @@ extension String {
         return DateFormatter.defaultFormatter.string(from: date)
     }
 }
+
+extension UIView{
+    func rotate() {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+//        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.toValue = Double.pi * 2
+        rotation.duration = 0.3
+        rotation.isCumulative = true
+        rotation.repeatCount = 0
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
+}

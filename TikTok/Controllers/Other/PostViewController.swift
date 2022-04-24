@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol PostViewControllerDelegate: AnyObject {
     func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
+    func postViewController(_ vc: PostViewController, didTapProfileButtonFor post: PostModel)
+    func didTapFollowButton(_ vc: PostViewController, didTapFollowButtonFor post: PostModel, button: UIButton)
 }
 
 class PostViewController: UIViewController {
@@ -41,6 +44,22 @@ class PostViewController: UIViewController {
         return button
     }()
     
+    private let profileButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(named: "test"), for: .normal)
+        button.tintColor = .white
+        button.layer.masksToBounds = true
+        button.imageView?.contentMode = .scaleAspectFill
+        return button
+    }()
+    
+    private let followButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(named: "add"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        return button
+    }()
+    
     private let captionLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -50,6 +69,8 @@ class PostViewController: UIViewController {
         label.textColor = .white
         return label
     }()
+    
+    var player: AVPlayer?
     
     // MARK: -init
     
@@ -64,7 +85,7 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureVideo()
         let colors: [UIColor] = [
             .systemRed,
             .systemGreen,
@@ -84,6 +105,10 @@ class PostViewController: UIViewController {
         setUpButtons()
         setUpDoubleTapToLike()
         view.addSubview(captionLabel)
+        view.addSubview(profileButton)
+        view.addSubview(followButton)
+        profileButton.addTarget(self, action: #selector(didTapProfileButton), for: .touchUpInside)
+        followButton.addTarget(self, action: #selector(didTapFollowButton), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -108,6 +133,47 @@ class PostViewController: UIViewController {
             width: view.width - size - 12,
             height: labelSize.height
         )
+        profileButton.frame = CGRect(
+            x: 0,
+            y: likeButton.top - size*2,
+            width: size + 12,
+            height: size + 12
+        )
+        profileButton.center.x = likeButton.center.x
+        profileButton.layer.cornerRadius = (size + 12)/2
+        profileButton.layer.borderWidth = 1
+        profileButton.layer.borderColor = UIColor.white.cgColor
+        
+        followButton.frame = CGRect(
+            x: 0,
+            y: profileButton.bottom - 15,
+            width: 25,
+            height: 25
+        )
+        followButton.center.x = profileButton.center.x
+    }
+    
+    private func configureVideo() {
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        player = AVPlayer(url: url)
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(playerLayer)
+        player?.volume = 1.0
+        player?.play()
+    }
+    
+    @objc private func didTapProfileButton() {
+        delegate?.postViewController(self, didTapProfileButtonFor: model)
+    }
+    
+    @objc private func didTapFollowButton() {
+        delegate?.didTapFollowButton(self, didTapFollowButtonFor: model, button: followButton)
     }
     
     func setUpButtons() {
