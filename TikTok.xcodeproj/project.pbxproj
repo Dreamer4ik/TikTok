@@ -110,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF05CF06281B10B100033554 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDD2AD281079E700D9E8A6 /* SignInViewController.swift */,
+				DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		DFCDD27B2810728600D9E8A6 = {
 			isa = PBXGroup;
 			children = (
@@ -226,9 +235,8 @@
 		DFCDD2A2281078F500D9E8A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				DF05CF06281B10B100033554 /* Authentication */,
 				DFCDD2AB281079C100D9E8A6 /* UserListViewController.swift */,
-				DFCDD2AD281079E700D9E8A6 /* SignInViewController.swift */,
-				DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */,
 				DFCDD2B128107A1900D9E8A6 /* SettingsViewController.swift */,
 				DFCDD2B728107B0000D9E8A6 /* PostViewController.swift */,
 				DF8BD2422814574E005C2C99 /* CommentsViewController.swift */,
