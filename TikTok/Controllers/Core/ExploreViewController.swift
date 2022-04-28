@@ -23,7 +23,7 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ExploreManager.shared.delegate = self
         view.backgroundColor = .systemBackground
         configureModels()
         setUpSearchBar()
@@ -41,136 +41,61 @@ class ExploreViewController: UIViewController {
     }
     
     private func configureModels() {
-        var cells = [ExploreCell]()
-        for _ in 0...30 {
-            let cell = ExploreCell.banner(
-                viewModel: ExploreBannerViewModel(
-                    image: UIImage(named: "test"),
-                    title: "Banner",
-                    handler: {
-                        
-                    }
-                )
-            )
-            cells.append(cell)
-        }
+     
         // Banner
         sections.append(
             ExploreSection(
                 type: .banners,
-                cells: cells
+                cells: ExploreManager.shared.getExploreBanners().compactMap({
+                    return ExploreCell.banner(viewModel: $0)
+                })
             )
         )
-        
-        var posts = [ExploreCell]()
-        for _ in 0...40 {
-            posts.append(
-                .post(viewModel: ExplorePostViewModel(thumbnailImage: UIImage(named: "test"), caption: "This is awesome post and a sooooo long caption......", handler: {
-                    
-                }))
-            )
-        }
+
         // Trending posts
         sections.append(
             ExploreSection(
                 type: .trendingPosts,
-                cells: posts            )
+                cells: ExploreManager.shared.getExploreTrendingPosts().compactMap({
+                    return ExploreCell.post(viewModel: $0)
+                })
+            )
         )
         // Users
         sections.append(
             ExploreSection(
                 type: .users,
-                cells: [
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "potus",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "dreamer",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "gordon",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "kadyk",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "vyrvu",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "uk",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                    .user(viewModel: ExploreUserViewModel(profilePictureURL: nil,
-                                                          username: "again",
-                                                          followerCount: 0,
-                                                          handler: {
-                                                              
-                                                          })),
-                ]
+                cells: ExploreManager.shared.getExploreCreators().compactMap({
+                    return ExploreCell.user(viewModel: $0)
+                })
             )
         )
         // Trending hashtags
         sections.append(
             ExploreSection(
                 type: .trendingHashTags,
-                cells: [
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "foryou", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "tiktok", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "awesome", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "great", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "fit4life", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "m1pro", icon: UIImage(systemName: "number.circle"), count: 1, handler: {
-                        
-                    })),
-                ]
+                cells: ExploreManager.shared.getExploreHashtags().compactMap({
+                    return ExploreCell.hashtag(viewModel: $0)
+                })
             )
         )
-        // Recommended
-        sections.append(
-            ExploreSection(
-                type: .recommended,
-                cells: posts
-            )
-        )
+
         // Popular
         sections.append(
             ExploreSection(
                 type: .popular,
-                cells: posts
+                cells: ExploreManager.shared.getExplorePopularPosts().compactMap({
+                    return ExploreCell.post(viewModel: $0)
+                })
             )
         )
         // new/recent
         sections.append(
             ExploreSection(
                 type: .new,
-                cells: posts
+                cells: ExploreManager.shared.getExploreRecentPosts().compactMap({
+                    return ExploreCell.post(viewModel: $0)
+                })
             )
         )
     }
@@ -285,13 +210,13 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         switch model {
         case .banner(let viewModel):
-            break
+            viewModel.handler()
         case .post(let viewModel):
-            break
+            viewModel.handler()
         case .hashtag(let viewModel):
-            break
+            viewModel.handler()
         case .user(let viewModel):
-            break
+            viewModel.handler()
         }
     }
     
@@ -300,6 +225,20 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 extension ExploreViewController: UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(didTapCancel))
+    }
+    
+    @objc private func didTapCancel() {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.resignFirstResponder()
+    }
 }
 
 // MARK: - Section Layouts
@@ -445,4 +384,16 @@ extension ExploreViewController {
         }
         
     }
+}
+
+extension ExploreViewController: ExploreManagerDelegate {
+    func didTapHashtag(_ hashtag: String) {
+        searchBar.text = hashtag
+        searchBar.becomeFirstResponder()
+    }
+    
+    func pushViewController(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
 }

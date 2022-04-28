@@ -28,7 +28,7 @@ class ExploreHashtagCollectionViewCell: UICollectionViewCell {
         contentView.clipsToBounds = true
         contentView.addSubview(iconImageView)
         contentView.addSubview(hashtagLabel)
-        contentView.backgroundColor = .systemGray5
+        contentView.backgroundColor = .secondarySystemBackground
     }
     
     required init?(coder: NSCoder) {
@@ -37,7 +37,7 @@ class ExploreHashtagCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let iconSize:CGFloat = contentView.height/3
+        let iconSize:CGFloat = contentView.height/2
         
         iconImageView.frame = CGRect(
             x: 10,

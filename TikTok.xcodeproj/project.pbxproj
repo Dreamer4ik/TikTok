@@ -20,6 +20,8 @@
 		DF8BD24528146690005C2C99 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD24428146690005C2C99 /* PostComment.swift */; };
 		DF8BD247281466DF005C2C99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD246281466DF005C2C99 /* User.swift */; };
 		DF9E96812811E39D00D88A11 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E96802811E39D00D88A11 /* PostModel.swift */; };
+		DFA15220281A8381003FC98D /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = DFA1521F281A8381003FC98D /* explore.json */; };
+		DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA15221281A8457003FC98D /* ExploreManager.swift */; };
 		DFC17EDB281158A500209669 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFC17EDA281158A500209669 /* GoogleService-Info.plist */; };
 		DFCC7D4C2818140100BE7707 /* ExploreBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */; };
 		DFCC7D4E2818141300BE7707 /* ExplorePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */; };
@@ -65,6 +67,8 @@
 		DF8BD24428146690005C2C99 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		DF8BD246281466DF005C2C99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DF9E96802811E39D00D88A11 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		DFA1521F281A8381003FC98D /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
+		DFA15221281A8457003FC98D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
 		DFC17EDA281158A500209669 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		DFCDD29B281077BF00D9E8A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DFA1521F281A8381003FC98D /* explore.json */,
 				DFCDD2902810728800D9E8A6 /* Assets.xcassets */,
 				DF50A7B32815BB50004D07BD /* video.mp4 */,
 				DFC17EDA281158A500209669 /* GoogleService-Info.plist */,
@@ -200,6 +205,7 @@
 				DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */,
 				DFCDD2BB28107B7B00D9E8A6 /* StorageManager.swift */,
 				DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */,
+				DFA15221281A8457003FC98D /* ExploreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA15220281A8381003FC98D /* explore.json in Resources */,
 				DFCDD2942810728800D9E8A6 /* LaunchScreen.storyboard in Resources */,
 				DFCDD2912810728800D9E8A6 /* Assets.xcassets in Resources */,
 				DFC17EDB281158A500209669 /* GoogleService-Info.plist in Resources */,
@@ -413,6 +420,7 @@
 				DFCDD2B228107A1900D9E8A6 /* SettingsViewController.swift in Sources */,
 				DFCC7D4C2818140100BE7707 /* ExploreBannerCollectionViewCell.swift in Sources */,
 				DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */,
+				DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */,
 				DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */,
 				DF1C062D28170E2200A344CB /* ExplorePostViewModel.swift in Sources */,
 				DF1C062728170B8200A344CB /* ExploreCell.swift in Sources */,

@@ -1,0 +1,230 @@
+{
+  "banners": [
+    {
+      "id": "nature",
+      "image": "banner1",
+      "title": "Nature",
+      "action": "hashtag"
+    },
+    {
+      "id": "jason_derulo",
+      "image": "banner2",
+      "title": "Till Lindemann",
+      "action": "user"
+    },
+    {
+      "id": "newyorkcity",
+      "image": "banner3",
+      "title": "New York City",
+      "action": "hashtag"
+    },
+    {
+      "id": "2131224214",
+      "image": "banner4",
+      "title": "Chill",
+      "action": "post"
+    }
+  ],
+  "trendingPosts": [
+    {
+      "id": "1",
+      "image": "trending1",
+      "caption": "2022 has been crazy!",
+    },
+    {
+      "id": "2",
+      "image": "trending2",
+      "caption": "Australia trip 2022!",
+    },
+    {
+      "id": "3",
+      "image": "trending3",
+      "caption": "What do you actually want!",
+    },
+    {
+      "id": "4",
+      "image": "trending4",
+      "caption": "Follow on instagram!",
+    },
+    {
+      "id": "5",
+      "image": "trending5",
+      "caption": "Finding more friends!",
+    },
+    {
+      "id": "6",
+      "image": "trending6",
+      "caption": "Day trip to the beach!",
+    },
+    {
+      "id": "7",
+      "image": "trending7",
+      "caption": "Merry Christmas to all!",
+    },
+    {
+      "id": "8",
+      "image": "trending8",
+      "caption": "This tiktok app course is amazing!",
+    },
+    {
+      "id": "9",
+      "image": "trending9",
+      "caption": "For you page is rigged!",
+    },
+    {
+      "id": "10",
+      "image": "trending10",
+      "caption": "Try the WAP dance!",
+    }
+  ],
+  "creators": [
+    {
+      "id": "user1",
+      "image": "creator1",
+      "username": "elon",
+      "followers_count": 1200
+    },
+    {
+      "id": "user2",
+      "image": "creator2",
+      "username": "den",
+      "followers_count": 1200
+    },
+    {
+      "id": "user3",
+      "image": "creator3",
+      "username": "lesley",
+      "followers_count": 1200
+    },
+    {
+      "id": "user4",
+      "image": "creator4",
+      "username": "gordon",
+      "followers_count": 1200
+    },
+    {
+      "id": "user5",
+      "image": "creator5",
+      "username": "mavr",
+      "followers_count": 1200
+    }
+  ],
+  "recentPosts": [
+    {
+      "id": "1",
+      "image": "trending1",
+      "caption": "2022 has been crazy!",
+    },
+    {
+      "id": "2",
+      "image": "trending2",
+      "caption": "Australia trip 2022!",
+    },
+    {
+      "id": "3",
+      "image": "trending4",
+      "caption": "What do you actually want!",
+    },
+    {
+      "id": "4",
+      "image": "trending5",
+      "caption": "Follow on instagram!",
+    },
+    {
+      "id": "5",
+      "image": "trending6",
+      "caption": "Finding more friends!",
+    },
+    {
+      "id": "6",
+      "image": "trending8",
+      "caption": "Day trip to the beach!",
+    }
+  ],
+  "hashtags": [
+    {
+      "image": "hash",
+      "tag": "foryoupage",
+      "count": 24000
+    },
+    {
+      "image": "hash",
+      "tag": "yearInReview",
+      "count": 1000
+    },
+    {
+      "image": "hash",
+      "tag": "2022best",
+      "count": 2000
+    },
+    {
+      "image": "hash",
+      "tag": "summertime",
+      "count": 400
+    }
+  ],
+  "popular": [
+    {
+      "id": "1",
+      "image": "trending10",
+      "caption": "2022 has been crazy!",
+    },
+    {
+      "id": "2",
+      "image": "trending8",
+      "caption": "Australia trip 2022!",
+    },
+    {
+      "id": "3",
+      "image": "trending4",
+      "caption": "What do you actually want!",
+    },
+    {
+      "id": "4",
+      "image": "trending3",
+      "caption": "Follow on instagram!",
+    },
+    {
+      "id": "5",
+      "image": "trending1",
+      "caption": "Finding more friends!",
+    },
+    {
+      "id": "6",
+      "image": "trending2",
+      "caption": "Day trip to the beach!",
+    }
+  ],
+  "recommended": [
+    {
+      "id": "1",
+      "image": "trending1",
+      "caption": "2022 has been crazy!",
+    },
+    {
+      "id": "2",
+      "image": "trending2",
+      "caption": "Australia trip 2022!",
+    },
+    {
+      "id": "3",
+      "image": "trending3",
+      "caption": "What do you actually want!",
+    },
+    {
+      "id": "4",
+      "image": "trending4",
+      "caption": "Follow on instagram!",
+    },
+    {
+      "id": "5",
+      "image": "trending5",
+      "caption": "Finding more friends!",
+    },
+    {
+      "id": "6",
+      "image": "trending10",
+      "caption": "Day trip to the beach!",
+    }
+  ]
+}
