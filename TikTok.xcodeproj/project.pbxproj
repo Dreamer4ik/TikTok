@@ -19,6 +19,8 @@
 		DF8BD2432814574F005C2C99 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD2422814574E005C2C99 /* CommentsViewController.swift */; };
 		DF8BD24528146690005C2C99 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD24428146690005C2C99 /* PostComment.swift */; };
 		DF8BD247281466DF005C2C99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BD246281466DF005C2C99 /* User.swift */; };
+		DF8D8F81281BD98C00942ED9 /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D8F80281BD98C00942ED9 /* AuthField.swift */; };
+		DF8D8F83281BD9BE00942ED9 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D8F82281BD9BE00942ED9 /* AuthButton.swift */; };
 		DF9E96812811E39D00D88A11 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E96802811E39D00D88A11 /* PostModel.swift */; };
 		DFA15220281A8381003FC98D /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = DFA1521F281A8381003FC98D /* explore.json */; };
 		DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA15221281A8457003FC98D /* ExploreManager.swift */; };
@@ -66,6 +68,8 @@
 		DF8BD2422814574E005C2C99 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		DF8BD24428146690005C2C99 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		DF8BD246281466DF005C2C99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DF8D8F80281BD98C00942ED9 /* AuthField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
+		DF8D8F82281BD9BE00942ED9 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		DF9E96802811E39D00D88A11 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		DFA1521F281A8381003FC98D /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		DFA15221281A8457003FC98D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */,
 				DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */,
 				DFCC7D512818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift */,
+				DF8D8F80281BD98C00942ED9 /* AuthField.swift */,
+				DF8D8F82281BD9BE00942ED9 /* AuthButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -416,6 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8D8F83281BD9BE00942ED9 /* AuthButton.swift in Sources */,
+				DF8D8F81281BD98C00942ED9 /* AuthField.swift in Sources */,
 				DFCDD2C228107C6600D9E8A6 /* HapticsManager.swift in Sources */,
 				DFD206D22811BC8800D2376D /* Extensions.swift in Sources */,
 				DFCDD2BE28107BB200D9E8A6 /* DatabaseManager.swift in Sources */,
