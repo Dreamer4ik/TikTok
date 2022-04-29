@@ -28,6 +28,15 @@ final class AuthManager {
         
     }
     
+    public func signUp(
+        username: String,
+        email: String,
+        password: String,
+        completion: @escaping (Bool) -> Void
+    ) {
+        
+    }
+    
     public func signOut(completion: (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
