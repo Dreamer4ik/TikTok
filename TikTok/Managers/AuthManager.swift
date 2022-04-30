@@ -20,12 +20,29 @@ final class AuthManager {
         case google
     }
     
+    enum AuthError: Error {
+        case signInFailed
+    }
+    
     public var isSignedIn: Bool {
         return Auth.auth().currentUser != nil
     }
     
-    public func signIn(email: String, password: String, completion: @escaping (Bool) -> Void) {
-        
+    public func signIn(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+                else {
+                    completion(.failure(AuthError.signInFailed))
+                }
+                return
+            }
+            
+            // Successful sign in
+            completion(.success(email))
+        }
     }
     
     public func signUp(
@@ -34,7 +51,15 @@ final class AuthManager {
         password: String,
         completion: @escaping (Bool) -> Void
     ) {
-        
+        // Make sure entered username is available
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else {
+                completion(false)
+                return
+            }
+            
+            DatabaseManager.shared.insertUser(with: email, username: username, completion: completion)
+        }
     }
     
     public func signOut(completion: (Bool) -> Void) {

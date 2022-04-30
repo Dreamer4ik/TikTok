@@ -124,8 +124,23 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
             return
         }
         
-        AuthManager.shared.signUp(username: username, email: email, password: password) { success in
-            
+        AuthManager.shared.signUp(username: username, email: email, password: password) { [weak self] success in
+            DispatchQueue.main.async {
+                if success {
+                    print("signed up")
+                    self?.dismiss(animated: true,completion: nil)
+                }
+                else {
+                    let alert = UIAlertController(
+                        title: "Signed Up Failed",
+                        message: "Something went wrong when trying to register. Please try again",
+                        preferredStyle: .alert
+                    )
+                    
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self?.present(alert, animated: true)
+                }
+            }
         }
     }
     
