@@ -24,7 +24,6 @@
 		DF9E96812811E39D00D88A11 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E96802811E39D00D88A11 /* PostModel.swift */; };
 		DFA15220281A8381003FC98D /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = DFA1521F281A8381003FC98D /* explore.json */; };
 		DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA15221281A8457003FC98D /* ExploreManager.swift */; };
-		DFCA38F6281D4149008386FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFCA38F5281D4149008386FC /* GoogleService-Info.plist */; };
 		DFCC7D4C2818140100BE7707 /* ExploreBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */; };
 		DFCC7D4E2818141300BE7707 /* ExplorePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */; };
 		DFCC7D502818142700BE7707 /* ExploreUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */; };
@@ -49,6 +48,7 @@
 		DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */; };
 		DFCDD2C228107C6600D9E8A6 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */; };
 		DFD206D22811BC8800D2376D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD206D12811BC8800D2376D /* Extensions.swift */; };
+		DFE03D12281DCFFC00029552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */; };
 		F7330DA525D86B6F2FB8BC95 /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,6 @@
 		DF9E96802811E39D00D88A11 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		DFA1521F281A8381003FC98D /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		DFA15221281A8457003FC98D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
-		DFCA38F5281D4149008386FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		DFCDD2BF28107BED00D9E8A6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		DFCDD2C128107C6600D9E8A6 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		DFD206D12811BC8800D2376D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +164,7 @@
 				DFCDD2872810728600D9E8A6 /* AppDelegate.swift */,
 				DFCDD2892810728600D9E8A6 /* SceneDelegate.swift */,
 				DFD206D12811BC8800D2376D /* Extensions.swift */,
-				DFCA38F5281D4149008386FC /* GoogleService-Info.plist */,
+				DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 			files = (
 				DFA15220281A8381003FC98D /* explore.json in Resources */,
 				DFCDD2942810728800D9E8A6 /* LaunchScreen.storyboard in Resources */,
-				DFCA38F6281D4149008386FC /* GoogleService-Info.plist in Resources */,
+				DFE03D12281DCFFC00029552 /* GoogleService-Info.plist in Resources */,
 				DFCDD2912810728800D9E8A6 /* Assets.xcassets in Resources */,
 				DF50A7B42815BB50004D07BD /* video.mp4 in Resources */,
 			);
@@ -596,12 +596,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UNQVQM5ZA2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTok/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TikTok;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -613,8 +616,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Practice.TikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = Practice.TikTok123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -627,12 +631,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UNQVQM5ZA2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTok/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TikTok;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -644,8 +651,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Practice.TikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = Practice.TikTok123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

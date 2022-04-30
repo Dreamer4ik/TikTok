@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>277793484297-ucpe18c9l0fpa41euijkapkdvcfkngkh.apps.googleusercontent.com</string>
+	<string>277793484297-ado3dmvdca2dsbd8ei4mdj7t59qmsrgc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.277793484297-ucpe18c9l0fpa41euijkapkdvcfkngkh</string>
+	<string>com.googleusercontent.apps.277793484297-ado3dmvdca2dsbd8ei4mdj7t59qmsrgc</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD3vxfm6U9gvXF4tan6ULdGnLwdV9ueZEA</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Practice.TikTok</string>
+	<string>Practice.TikTok123</string>
 	<key>PROJECT_ID</key>
 	<string>tiktok-b14b1</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:277793484297:ios:7a72dff8ce2c56578412d8</string>
+	<string>1:277793484297:ios:09456aba230b085e8412d8</string>
 	<key>DATABASE_URL</key>
 	<string>https://tiktok-b14b1-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
