@@ -49,6 +49,58 @@ final class DatabaseManager {
         }
     }
     
+    public func getUsername(for email: String, completion: @escaping (String?) -> Void) {
+        database.child("users").observeSingleEvent(of: .value) { snapshot in
+            guard let users = snapshot.value as? [String: [String: Any]] else {
+                completion(nil)
+                return
+            }
+            
+            for (username,value) in users {
+                if value["email"] as? String == email {
+                    completion(username)
+                    break
+                }
+            }
+        }
+    }
+    
+    public func insertPost(filename: String, completion: @escaping (Bool) -> Void) {
+        guard let username = UserDefaults.standard.string(forKey: "username") else {
+            completion(false)
+            return
+        }
+        
+        database.child("users").child(username).observeSingleEvent(of: .value) { [weak self] snapshot in
+            guard var value = snapshot.value as? [String: Any] else {
+                completion(false)
+                return
+            }
+            
+            if var posts = value["posts"] as? [String] {
+                posts.append(filename)
+                value["posts"] = posts
+                self?.database.child("users").child(username).setValue(value) { error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    completion(true)
+                }
+            }
+            else {
+                value["posts"] = [filename]
+                self?.database.child("users").child(username).setValue(value) { error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    completion(true)
+                }
+
+            }
+        }
+    }
     
     public func getAllUsers(completion: ([String]) -> Void) {
         
