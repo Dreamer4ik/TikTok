@@ -118,7 +118,7 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
                 )
 
             }
-            cell.configure(with: postName)
+            cell.configure(with: postName, model: model)
             return cell
         case .userFollow(username: let username):
             guard let cell = tableView.dequeueReusableCell(
@@ -131,7 +131,7 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
                 )
 
             }
-            cell.configure(with: username)
+            cell.configure(with: username, model: model)
             return cell
         case .postComment(postName: let postName):
             guard let cell = tableView.dequeueReusableCell(
@@ -144,10 +144,13 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
                 )
 
             }
-            cell.configure(with: postName)
+            cell.configure(with: postName, model: model)
             return cell
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
 }
