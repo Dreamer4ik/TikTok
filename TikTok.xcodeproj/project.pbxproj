@@ -25,6 +25,9 @@
 		DFA15220281A8381003FC98D /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = DFA1521F281A8381003FC98D /* explore.json */; };
 		DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA15221281A8457003FC98D /* ExploreManager.swift */; };
 		DFC719E428210CD200E6F87A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E328210CD200E6F87A /* Notifications.swift */; };
+		DFC719E6282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E5282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift */; };
+		DFC719EA28211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E928211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift */; };
+		DFC719EC28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719EB28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift */; };
 		DFCC7D4C2818140100BE7707 /* ExploreBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */; };
 		DFCC7D4E2818141300BE7707 /* ExplorePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */; };
 		DFCC7D502818142700BE7707 /* ExploreUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */; };
@@ -77,6 +80,9 @@
 		DFA1521F281A8381003FC98D /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		DFA15221281A8457003FC98D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
 		DFC719E328210CD200E6F87A /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		DFC719E5282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsUserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		DFC719E928211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostLikeTableViewCell.swift; sourceTree = "<group>"; };
+		DFC719EB28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostCommentTableViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +133,36 @@
 				DFCDD2AF281079F700D9E8A6 /* SignUpViewController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DFC719E728211AA000E6F87A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DF8D8F80281BD98C00942ED9 /* AuthField.swift */,
+				DF8D8F82281BD9BE00942ED9 /* AuthButton.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DFC719E828211AB600E6F87A /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */,
+				DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */,
+				DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */,
+				DFCC7D512818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DFC719ED28211B6000E6F87A /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				DFC719E5282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift */,
+				DFC719E928211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift */,
+				DFC719EB28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		DFCDD27B2810728600D9E8A6 = {
@@ -268,13 +304,10 @@
 			isa = PBXGroup;
 			children = (
 				DF6C2B65281556240033E395 /* CommentTableViewCell.swift */,
-				DFCC7D4B2818140100BE7707 /* ExploreBannerCollectionViewCell.swift */,
-				DFCC7D4D2818141300BE7707 /* ExplorePostCollectionViewCell.swift */,
-				DFCC7D4F2818142700BE7707 /* ExploreUserCollectionViewCell.swift */,
-				DFCC7D512818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift */,
-				DF8D8F80281BD98C00942ED9 /* AuthField.swift */,
-				DF8D8F82281BD9BE00942ED9 /* AuthButton.swift */,
 				DFD2D33D281E96DD0078F5BA /* RecordButton.swift */,
+				DFC719E828211AB600E6F87A /* Explore */,
+				DFC719E728211AA000E6F87A /* Auth */,
+				DFC719ED28211B6000E6F87A /* Notifications */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -434,6 +467,7 @@
 				DFC719E428210CD200E6F87A /* Notifications.swift in Sources */,
 				DF8D8F83281BD9BE00942ED9 /* AuthButton.swift in Sources */,
 				DF8D8F81281BD98C00942ED9 /* AuthField.swift in Sources */,
+				DFC719EA28211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift in Sources */,
 				DFCDD2C228107C6600D9E8A6 /* HapticsManager.swift in Sources */,
 				DFD206D22811BC8800D2376D /* Extensions.swift in Sources */,
 				DFCDD2BE28107BB200D9E8A6 /* DatabaseManager.swift in Sources */,
@@ -448,6 +482,7 @@
 				DFCDD2B828107B0000D9E8A6 /* PostViewController.swift in Sources */,
 				DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */,
 				DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */,
+				DFC719E6282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift in Sources */,
 				DFD2D340281EA10F0078F5BA /* CaptionViewController.swift in Sources */,
 				DF1C062D28170E2200A344CB /* ExplorePostViewModel.swift in Sources */,
 				DF1C062728170B8200A344CB /* ExploreCell.swift in Sources */,
@@ -458,6 +493,7 @@
 				DFCC7D522818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift in Sources */,
 				DF8BD247281466DF005C2C99 /* User.swift in Sources */,
 				DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */,
+				DFC719EC28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift in Sources */,
 				DFCDD28C2810728600D9E8A6 /* HomeViewController.swift in Sources */,
 				DFD2D33E281E96DD0078F5BA /* RecordButton.swift in Sources */,
 				DFCDD2B0281079F700D9E8A6 /* SignUpViewController.swift in Sources */,
