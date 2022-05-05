@@ -24,6 +24,7 @@
 		DF9E96812811E39D00D88A11 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E96802811E39D00D88A11 /* PostModel.swift */; };
 		DFA15220281A8381003FC98D /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = DFA1521F281A8381003FC98D /* explore.json */; };
 		DFA15222281A8457003FC98D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA15221281A8457003FC98D /* ExploreManager.swift */; };
+		DFC5D6D62823C8DC00EC38CA /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5D6D52823C8DC00EC38CA /* ProfileHeaderViewModel.swift */; };
 		DFC719E428210CD200E6F87A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E328210CD200E6F87A /* Notifications.swift */; };
 		DFC719E6282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E5282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift */; };
 		DFC719EA28211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC719E928211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift */; };
@@ -55,6 +56,7 @@
 		DFD2D33E281E96DD0078F5BA /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2D33D281E96DD0078F5BA /* RecordButton.swift */; };
 		DFD2D340281EA10F0078F5BA /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2D33F281EA10F0078F5BA /* CaptionViewController.swift */; };
 		DFE03D12281DCFFC00029552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */; };
+		DFF4D44A2823B27000D97088 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4D4492823B27000D97088 /* ProfileHeaderCollectionReusableView.swift */; };
 		F7330DA525D86B6F2FB8BC95 /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,7 @@
 		DF9E96802811E39D00D88A11 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		DFA1521F281A8381003FC98D /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		DFA15221281A8457003FC98D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
+		DFC5D6D52823C8DC00EC38CA /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		DFC719E328210CD200E6F87A /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		DFC719E5282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsUserFollowTableViewCell.swift; sourceTree = "<group>"; };
 		DFC719E928211AF800E6F87A /* NotificationsPostLikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostLikeTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		DFD2D33D281E96DD0078F5BA /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		DFD2D33F281EA10F0078F5BA /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFF4D4492823B27000D97088 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 				DF1C062C28170E2200A344CB /* ExplorePostViewModel.swift */,
 				DF1C062E28170E3300A344CB /* ExploreHashtagViewModel.swift */,
 				DF1C063028170E4400A344CB /* ExploreUserViewModel.swift */,
+				DFC5D6D52823C8DC00EC38CA /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				DFC719E828211AB600E6F87A /* Explore */,
 				DFC719E728211AA000E6F87A /* Auth */,
 				DFC719ED28211B6000E6F87A /* Notifications */,
+				DFF4D4492823B27000D97088 /* ProfileHeaderCollectionReusableView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 				DFCDD2A62810794200D9E8A6 /* CameraViewController.swift in Sources */,
 				DFC719E6282119F500E6F87A /* NotificationsUserFollowTableViewCell.swift in Sources */,
 				DFD2D340281EA10F0078F5BA /* CaptionViewController.swift in Sources */,
+				DFC5D6D62823C8DC00EC38CA /* ProfileHeaderViewModel.swift in Sources */,
 				DF1C062D28170E2200A344CB /* ExplorePostViewModel.swift in Sources */,
 				DF1C062728170B8200A344CB /* ExploreCell.swift in Sources */,
 				DF8BD2432814574F005C2C99 /* CommentsViewController.swift in Sources */,
@@ -492,6 +499,7 @@
 				DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */,
 				DFCC7D522818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift in Sources */,
 				DF8BD247281466DF005C2C99 /* User.swift in Sources */,
+				DFF4D44A2823B27000D97088 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */,
 				DFC719EC28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift in Sources */,
 				DFCDD28C2810728600D9E8A6 /* HomeViewController.swift in Sources */,
