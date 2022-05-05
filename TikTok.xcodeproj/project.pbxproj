@@ -661,6 +661,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTok;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -696,6 +697,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTok;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
