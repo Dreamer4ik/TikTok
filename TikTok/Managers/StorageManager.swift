@@ -61,4 +61,15 @@ final class StorageManager {
         
         return uuidString + "_\(number)_" + "\(unixTimestamp)" + ".mov"
     }
+    
+    func getDownloadURL(for post: PostModel, completion: @escaping (Result<URL, Error>) -> Void) {
+        storageBucket.child(post.videoChildPath).downloadURL { url, error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            else if let url = url {
+                completion(.success(url))
+            }
+        }
+    }
 }

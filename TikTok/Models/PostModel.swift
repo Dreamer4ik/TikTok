@@ -9,7 +9,6 @@ import Foundation
 
 struct PostModel {
     let identifier: String
-    
     let user: User
     var fileName: String = ""
     var caption: String = ""
@@ -30,5 +29,9 @@ struct PostModel {
             posts.append(post)
         }
         return posts
+    }
+    
+    var videoChildPath: String {
+        return ("videos/\(user.username.lowercased())/\(fileName)")
     }
 }
