@@ -6,6 +6,17 @@
 //
 
 import UIKit
+import SafariServices
+
+struct SettingsSection {
+    let title: String
+    let options: [SettingsOption]
+}
+
+struct SettingsOption {
+    let title: String
+    let handler: (() -> Void)
+}
 
 class SettingsViewController: UIViewController {
     
@@ -16,8 +27,37 @@ class SettingsViewController: UIViewController {
         return table
     }()
     
+    var sections = [SettingsSection]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sections = [
+            SettingsSection(
+                title: "Information",
+                options: [
+                    SettingsOption(title: "Terms of Service", handler: { [weak self] in
+                        DispatchQueue.main.async {
+                            guard let url = URL(string: "https://www.tiktok.com/legal/terms-of-use") else {
+                                return
+                            }
+                            let vc = SFSafariViewController(url: url)
+                            self?.present(vc, animated: true)
+                        }
+                    }),
+                    SettingsOption(title: "Privacy Policy", handler: { [weak self] in
+                        DispatchQueue.main.async {
+                            guard let url = URL(string: "https://www.tiktok.com/legal/privacy-policy") else {
+                                return
+                            }
+                            let vc = SFSafariViewController(url: url)
+                            self?.present(vc, animated: true)
+                        }
+                    })
+                ]
+            )
+        ]
+        
         title = "Settings"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
@@ -58,7 +98,7 @@ class SettingsViewController: UIViewController {
                     }
                     else {
                         let alert = UIAlertController(title: "Woops",
-                                                            message: "Something went wrong when signing out. Please try again.",
+                                                      message: "Something went wrong when signing out. Please try again.",
                                                       preferredStyle: .alert)
                         actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
                         self?.present(alert, animated: true)
@@ -78,18 +118,35 @@ class SettingsViewController: UIViewController {
     
 }
 
+// Table View
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return sections[section].options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                 for: indexPath)
-        
-        cell.textLabel?.text = "TikTok"
+        let model = sections[indexPath.section].options[indexPath.row]
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "cell",
+            for: indexPath
+        )
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = model.title
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let model = sections[indexPath.section].options[indexPath.row]
+        model.handler()
+    }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].title
+    }
 }
