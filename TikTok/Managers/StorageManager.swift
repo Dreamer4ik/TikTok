@@ -8,14 +8,23 @@
 import Foundation
 import FirebaseStorage
 
+/// Manager object that deals with firebase storage
 final class StorageManager {
     
+    /// Shared singleton instance
     public static let shared = StorageManager()
     
+    /// Storage bucket reference
     private let storageBucket = Storage.storage().reference()
     
+    /// Private constructor
     private init() {}
     
+    /// Upload a new user video to firebase
+    /// - Parameters:
+    ///   - url: Local file url to video
+    ///   - filename: Desired video file upload name
+    ///   - completion: Async callback result closure
     public func uploadVideoURL(from url: URL, filename: String, completion: @escaping (Bool) -> Void) {
         guard let username = UserDefaults.standard.string(forKey: "username") else {
             return
@@ -25,6 +34,11 @@ final class StorageManager {
         }
     }
     
+    
+    /// Upload new profile picture
+    /// - Parameters:
+    ///   - image: New image to upload
+    ///   - completion: Async callback result closure
     public func uploadProfilePicture(with image: UIImage, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let username = UserDefaults.standard.string(forKey: "username") else {
             return
@@ -54,6 +68,9 @@ final class StorageManager {
         }
     }
     
+    
+    /// Generates a new file name
+    /// - Returns: Return a unique generated file name
     public func generateVideoName() -> String {
         let uuidString = UUID().uuidString
         let number = Int.random(in: 0...1000)
@@ -62,6 +79,10 @@ final class StorageManager {
         return uuidString + "_\(number)_" + "\(unixTimestamp)" + ".mov"
     }
     
+    /// Get download url of video post
+    /// - Parameters:
+    ///   - post: Post model to get url for
+    ///   - completion: Async callback result closure
     func getDownloadURL(for post: PostModel, completion: @escaping (Result<URL, Error>) -> Void) {
         storageBucket.child(post.videoChildPath).downloadURL { url, error in
             if let error = error {
