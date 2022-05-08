@@ -360,12 +360,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCDD2982810728800D9E8A6 /* Build configuration list for PBXNativeTarget "TikTok" */;
 			buildPhases = (
+				DFC80C1D28282D93009CA77F /* SwiftLint */,
 				3F22CFD88F99DC922FCD1D94 /* [CP] Check Pods Manifest.lock */,
 				DFCDD2802810728600D9E8A6 /* Sources */,
 				DFCDD2812810728600D9E8A6 /* Frameworks */,
 				DFCDD2822810728600D9E8A6 /* Resources */,
 				9889A2DD537B1D068C15FAF9 /* [CP] Embed Pods Frameworks */,
-				DFC17EDC28115D0A00209669 /* ShellScript */,
+				DFC17EDC28115D0A00209669 /* FirebaseCrashlytics */,
 			);
 			buildRules = (
 			);
@@ -464,7 +465,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFC17EDC28115D0A00209669 /* ShellScript */ = {
+		DFC17EDC28115D0A00209669 /* FirebaseCrashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -473,6 +474,7 @@
 			);
 			inputPaths = (
 			);
+			name = FirebaseCrashlytics;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -480,6 +482,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		DFC80C1D28282D93009CA77F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

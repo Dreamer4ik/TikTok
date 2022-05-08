@@ -9,27 +9,27 @@ import Foundation
 import UIKit
 
 extension UIView {
-    public var width: CGFloat{
+    public var width: CGFloat {
         return frame.size.width
     }
-    
-    public var height: CGFloat{
+
+    public var height: CGFloat {
         return frame.size.height
     }
-    
-    public var top: CGFloat{
+
+    public var top: CGFloat {
         return frame.origin.y
     }
-    
-    public var bottom: CGFloat{
+
+    public var bottom: CGFloat {
         return frame.size.height + frame.origin.y
     }
-    
-    public var left: CGFloat{
+
+    public var left: CGFloat {
         return frame.origin.x
     }
-    
-    public var right: CGFloat{
+
+    public var right: CGFloat {
         return frame.size.width + frame.origin.x
     }
 }
@@ -52,9 +52,9 @@ extension String {
     }
 }
 
-extension UIView{
+extension UIView {
     func rotate() {
-        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
 //        rotation.toValue = NSNumber(value: Double.pi * 2)
         rotation.toValue = Double.pi * 2
         rotation.duration = 0.3

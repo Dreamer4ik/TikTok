@@ -15,7 +15,7 @@ enum ExploreSectionType: CaseIterable {
     case recommended
     case popular
     case new
-    
+
     var title: String {
         switch self {
         case .banners:

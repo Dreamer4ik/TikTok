@@ -15,11 +15,11 @@ protocol PostViewControllerDelegate: AnyObject {
 }
 
 class PostViewController: UIViewController {
-    
+
     weak var delegate: PostViewControllerDelegate?
-    
+
     var model: PostModel
-    
+
     private let likeButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
@@ -27,7 +27,7 @@ class PostViewController: UIViewController {
         button.tintColor = .white
         return button
     }()
-    
+
     private let commentButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "text.bubble.fill"), for: .normal)
@@ -35,7 +35,7 @@ class PostViewController: UIViewController {
         button.tintColor = .white
         return button
     }()
-    
+
     private let shareButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "arrowshape.turn.up.right.fill"), for: .normal)
@@ -43,7 +43,7 @@ class PostViewController: UIViewController {
         button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
-    
+
     private let profileButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "test"), for: .normal)
@@ -52,14 +52,14 @@ class PostViewController: UIViewController {
         button.imageView?.contentMode = .scaleAspectFill
         return button
     }()
-    
+
     private let followButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "add"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
-    
+
     private let captionLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -69,18 +69,18 @@ class PostViewController: UIViewController {
         label.textColor = .white
         return label
     }()
-    
+
     var player: AVPlayer?
-    
+
     private var playerDidFinishObserver: NSObjectProtocol?
-    
+
     private let videoView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         view.clipsToBounds = true
         return view
     }()
-    
+
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.tintColor = .label
@@ -88,26 +88,25 @@ class PostViewController: UIViewController {
         spinner.startAnimating()
         return spinner
     }()
-    
-    // MARK: -Init
-    
+
+    // MARK: - Init
+
     init(model: PostModel) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(videoView)
         videoView.addSubview(spinner)
         configureVideo()
         view.backgroundColor = .black
-        
-        
+
         setUpButtons()
         setUpDoubleTapToLike()
         view.addSubview(captionLabel)
@@ -116,17 +115,17 @@ class PostViewController: UIViewController {
         profileButton.addTarget(self, action: #selector(didTapProfileButton), for: .touchUpInside)
         followButton.addTarget(self, action: #selector(didTapFollowButton), for: .touchUpInside)
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+
         videoView.frame = view.bounds
         spinner.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         spinner.center = videoView.center
-    
-        let size:CGFloat = 40
+
+        let size: CGFloat = 40
         let yStart: CGFloat = view.height - (size*4) - 30 - view.safeAreaInsets.bottom
-        for (index, button)  in [likeButton,commentButton,shareButton].enumerated() {
+        for (index, button)  in [likeButton, commentButton, shareButton].enumerated() {
             button.frame = CGRect(
                 x: view.width-size-10,
                 y: yStart + (CGFloat(index) * 10) + (CGFloat(index) * size),
@@ -134,7 +133,7 @@ class PostViewController: UIViewController {
                 height: size
             )
         }
-        
+
         captionLabel.sizeToFit()
         let labelSize = captionLabel.sizeThatFits(CGSize(width: view.width - size - 12, height: view.height))
         captionLabel.frame = CGRect(
@@ -153,7 +152,7 @@ class PostViewController: UIViewController {
         profileButton.layer.cornerRadius = (size + 12)/2
         profileButton.layer.borderWidth = 1
         profileButton.layer.borderColor = UIColor.white.cgColor
-        
+
         followButton.frame = CGRect(
             x: 0,
             y: profileButton.bottom - 15,
@@ -162,7 +161,7 @@ class PostViewController: UIViewController {
         )
         followButton.center.x = profileButton.center.x
     }
-    
+
     private func configureVideo() {
 
         StorageManager.shared.getDownloadURL(for: model) { [weak self] result in
@@ -170,27 +169,27 @@ class PostViewController: UIViewController {
                 guard let strongSelf = self else {
                     return
                 }
-                
+
                 strongSelf.spinner.stopAnimating()
                 strongSelf.spinner.removeFromSuperview()
                 switch result {
                 case .success(let url):
                     strongSelf.player = AVPlayer(url: url)
-                    
+
                     let playerLayer = AVPlayerLayer(player: self?.player)
                     playerLayer.frame = strongSelf.view.bounds
                     playerLayer.videoGravity = .resizeAspectFill
                     strongSelf.videoView.layer.addSublayer(playerLayer)
-                    
+
                     strongSelf.player?.volume = 1.0
                     strongSelf.player?.play()
-                case .failure(_):
+                case .failure:
                     guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
                         return
                     }
                     let url = URL(fileURLWithPath: path)
                     strongSelf.player = AVPlayer(url: url)
-                    
+
                     let playerLayer = AVPlayerLayer(player: strongSelf.player)
                     playerLayer.frame = strongSelf.view.bounds
                     playerLayer.videoGravity = .resizeAspectFill
@@ -200,12 +199,11 @@ class PostViewController: UIViewController {
                 }
             }
         }
-        
+
         guard let player = player else {
             return
         }
 
-        
         playerDidFinishObserver = NotificationCenter.default.addObserver(
             forName: .AVPlayerItemDidPlayToEndTime,
             object: player.currentItem,
@@ -215,35 +213,35 @@ class PostViewController: UIViewController {
                 player.play()
             })
     }
-    
+
     @objc private func didTapProfileButton() {
         delegate?.postViewController(self, didTapProfileButtonFor: model)
     }
-    
+
     @objc private func didTapFollowButton() {
         delegate?.didTapFollowButton(self, didTapFollowButtonFor: model, button: followButton)
     }
-    
+
     func setUpButtons() {
         view.addSubview(likeButton)
         view.addSubview(commentButton)
         view.addSubview(shareButton)
-        
+
         likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         commentButton.addTarget(self, action: #selector(didTapComment), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
     }
-    
+
     @objc private func didTapLike() {
         model.isLikedByCurrentUser = !model.isLikedByCurrentUser
-        
+
         likeButton.tintColor = model.isLikedByCurrentUser ? .systemRed : .white
     }
-    
+
     @objc private func didTapComment() {
         delegate?.postViewController(self, didTapCommentButtonFor: model)
     }
-    
+
     @objc private func didTapShare() {
         guard let url = URL(string: "https://www.tiktok.com") else {
             return
@@ -252,25 +250,25 @@ class PostViewController: UIViewController {
             activityItems: [url],
             applicationActivities: []
         )
-        
+
         present(vc, animated: true)
     }
-    
+
     func setUpDoubleTapToLike() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap(_:)))
         tap.numberOfTapsRequired = 2
         view.addGestureRecognizer(tap)
         view.isUserInteractionEnabled = true
     }
-    
+
     @objc private func didDoubleTap(_ gesture: UITapGestureRecognizer) {
         if !model.isLikedByCurrentUser {
             //            model.isLikedByCurrentUser = true
             didTapLike()
         }
-        
+
         let touchPoint = gesture.location(in: view)
-        
+
         let imageView  = UIImageView(image: UIImage(systemName: "heart.fill"))
         imageView.tintColor = .systemRed
         imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -278,7 +276,7 @@ class PostViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.alpha = 0
         view.addSubview(imageView)
-        
+
         UIView.animate(withDuration: 0.2) {
             imageView.alpha = 1
         } completion: { done in
@@ -288,9 +286,9 @@ class PostViewController: UIViewController {
                         let size = self.view.frame.size.width * 1
                         imageView.frame = CGRect(x: 0, y: 0, width: size, height: size)
                         imageView.center = touchPoint
-                        
+
                         imageView.alpha = 0
-                    } completion: { done in
+                    } completion: { _ in
                         imageView.removeFromSuperview()
                     }
                 }

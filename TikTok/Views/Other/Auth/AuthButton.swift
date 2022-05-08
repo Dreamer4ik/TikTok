@@ -8,12 +8,12 @@
 import UIKit
 
 class AuthButton: UIButton {
-    
+
     enum ButtonType {
         case signIn
         case signUp
         case plain
-        
+
         var title: String {
             switch self {
             case .signIn:
@@ -25,9 +25,9 @@ class AuthButton: UIButton {
             }
         }
     }
-    
+
     private let type: ButtonType
-    
+
     init(type: ButtonType, title: String?) {
         self.type = type
         super.init(frame: .zero)
@@ -36,11 +36,11 @@ class AuthButton: UIButton {
         }
         configureUI()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func configureUI() {
         if type != .plain {
             setTitle(type.title, for: .normal)
@@ -59,5 +59,5 @@ class AuthButton: UIButton {
         layer.cornerRadius = 8
         layer.masksToBounds = true
     }
-    
+
 }

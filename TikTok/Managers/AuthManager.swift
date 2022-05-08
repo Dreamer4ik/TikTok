@@ -14,24 +14,24 @@ final class AuthManager {
     public static let shared = AuthManager()
     /// Private constructor
     private init() {}
-    
+
     /// Represents method to sign in
     enum SignInMethod {
         case email
         case facebook
         case google
     }
-    
+
     /// Represents errors that can occur in auth flows
     enum AuthError: Error {
         case signInFailed
     }
-    
+
     /// Represents if user is signed in
     public var isSignedIn: Bool {
         return Auth.auth().currentUser != nil
     }
-    
+
     /// Attempt to sign in
     /// - Parameters:
     ///   - email: User email
@@ -42,25 +42,24 @@ final class AuthManager {
             guard result != nil, error == nil else {
                 if let error = error {
                     completion(.failure(error))
-                }
-                else {
+                } else {
                     completion(.failure(AuthError.signInFailed))
                 }
                 return
             }
-            
+
             DatabaseManager.shared.getUsername(for: email) { username in
                 if let username = username {
                     UserDefaults.standard.setValue(username, forKey: "username")
                     print("Got username: \(username)")
                 }
             }
-            
+
             // Successful sign in
             completion(.success(email))
         }
     }
-    
+
     /// Attempt to sign up
     /// - Parameters:
     ///   - username: Desired username
@@ -79,24 +78,23 @@ final class AuthManager {
                 completion(false)
                 return
             }
-            
+
             UserDefaults.standard.setValue(username, forKey: "username")
-            
+
             DatabaseManager.shared.insertUser(with: email, username: username, completion: completion)
         }
     }
-    
+
     /// Attempt to sign out
     /// - Parameter completion: Async callback of sing out result
     public func signOut(completion: (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
             completion(true)
-        }
-        catch {
+        } catch {
             print(error)
             completion(false)
         }
     }
-    
+
 }

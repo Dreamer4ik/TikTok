@@ -9,7 +9,7 @@ import UIKit
 import SafariServices
 
 class SettingsViewController: UIViewController {
-    
+
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(UITableViewCell.self,
@@ -18,23 +18,23 @@ class SettingsViewController: UIViewController {
                        forCellReuseIdentifier: SwitchTableViewCell.identifier)
         return table
     }()
-    
+
     var sections = [SettingsSection]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         sections = [
             SettingsSection(
                 title: "Preferences",
                 options: [
                     SettingsOption(title: "Save Videos", handler: {
-                        
+
                     })
-              
+
                 ]
             ),
-            
+
             SettingsSection(
                 title: "Information",
                 options: [
@@ -59,7 +59,7 @@ class SettingsViewController: UIViewController {
                 ]
             )
         ]
-        
+
         title = "Settings"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
@@ -67,7 +67,7 @@ class SettingsViewController: UIViewController {
         tableView.dataSource = self
         createFooter()
     }
-    
+
     func createFooter() {
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: 100))
         let button = UIButton(frame: CGRect(x: (view.width-200)/2, y: 25, width: 200, height: 50))
@@ -77,12 +77,12 @@ class SettingsViewController: UIViewController {
         footer.addSubview(button)
         tableView.tableFooterView = footer
     }
-    
+
     @objc private func didTapSignOut() {
         let actionSheet = UIAlertController(title: "Sign Out",
                                             message: "Would you like to sign out?",
                                             preferredStyle: .actionSheet)
-        
+
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         actionSheet.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { [weak self] _ in
             AuthManager.shared.signOut { success in
@@ -90,15 +90,14 @@ class SettingsViewController: UIViewController {
                     if success {
                         UserDefaults.standard.setValue(nil, forKey: "username")
                         UserDefaults.standard.setValue(nil, forKey: "profile_picture_url")
-                        
+
                         let vc = SignInViewController()
                         let navVC = UINavigationController(rootViewController: vc)
                         navVC.modalPresentationStyle = .fullScreen
                         self?.present(navVC, animated: true)
                         self?.navigationController?.popToRootViewController(animated: true)
                         self?.tabBarController?.selectedIndex = 0
-                    }
-                    else {
+                    } else {
                         let alert = UIAlertController(title: "Woops",
                                                       message: "Something went wrong when signing out. Please try again.",
                                                       preferredStyle: .alert)
@@ -108,32 +107,31 @@ class SettingsViewController: UIViewController {
                 }
             }
         }))
-        
+
         present(actionSheet, animated: true)
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
-    
-    
+
 }
 
 // Table View
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].options.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = sections[indexPath.section].options[indexPath.row]
-        
+
         if model.title == "Save Videos" {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: SwitchTableViewCell.identifier,
@@ -146,7 +144,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                                                      isOn: UserDefaults.standard.bool(forKey: "save_video")))
             return cell
         }
-        
+
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "cell",
             for: indexPath
@@ -155,13 +153,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = model.title
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let model = sections[indexPath.section].options[indexPath.row]
         model.handler()
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].title
     }
@@ -172,5 +170,5 @@ extension SettingsViewController: SwitchTableViewCellDelegate {
         HapticsManager.shared.vibrateForSelection()
         UserDefaults.standard.setValue(isOn, forKey: "save_video")
     }
-    
+
 }

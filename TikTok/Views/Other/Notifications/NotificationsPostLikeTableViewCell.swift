@@ -14,32 +14,32 @@ protocol NotificationsPostLikeTableViewCellDelegate: AnyObject {
 
 class NotificationsPostLikeTableViewCell: UITableViewCell {
     static let identifier = "NotificationsPostLikeTableViewCell"
-    
+
     weak var delegate: NotificationsPostLikeTableViewCellDelegate?
-    
+
     var postID: String?
-    
+
     private let postThumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
+
     private let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .label
         return label
     }()
-    
+
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .secondaryLabel
         return label
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.clipsToBounds = true
@@ -51,29 +51,28 @@ class NotificationsPostLikeTableViewCell: UITableViewCell {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPost))
         postThumbnailImageView.addGestureRecognizer(tap)
     }
-    
+
     @objc private func didTapPost() {
         guard let id = postID else {
             return
         }
         delegate?.notificationsPostLikeTableViewCell(self, didTapPostWith: id)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         postThumbnailImageView.frame = CGRect(
             x: contentView.width-60,
             y: 3,
             width: 50,
             height: contentView.height - 6
         )
-        
-        
+
         label.sizeToFit()
         dateLabel.sizeToFit()
         let labelSize = label.sizeThatFits(
@@ -82,14 +81,14 @@ class NotificationsPostLikeTableViewCell: UITableViewCell {
                 height: contentView.height - 40
             )
         )
-        
+
         label.frame = CGRect(
             x: 10,
             y: 0,
             width: labelSize.width,
             height: labelSize.height
         )
-        
+
         dateLabel.frame = CGRect(
             x: 10,
             y: label.bottom + 3,
@@ -97,14 +96,14 @@ class NotificationsPostLikeTableViewCell: UITableViewCell {
             height: 40
         )
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         postThumbnailImageView.image = nil
         label.text = nil
         dateLabel.text = nil
     }
-    
+
     func configure (with postFileName: String, model: Notification) {
         postThumbnailImageView.image = UIImage(named: "test")
         label.text = model.text

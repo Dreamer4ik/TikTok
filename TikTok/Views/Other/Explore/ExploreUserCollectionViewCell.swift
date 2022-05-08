@@ -9,7 +9,7 @@ import UIKit
 
 class ExploreUserCollectionViewCell: UICollectionViewCell {
     static let identifier = "ExploreUserCollectionViewCell"
-    
+
     private let profilePicture: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
@@ -18,7 +18,7 @@ class ExploreUserCollectionViewCell: UICollectionViewCell {
         imageView.backgroundColor = .secondarySystemBackground
         return imageView
     }()
-    
+
     private let userNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -26,18 +26,18 @@ class ExploreUserCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.clipsToBounds = true
         contentView.addSubview(profilePicture)
         contentView.addSubview(userNameLabel)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         let imageSize: CGFloat = contentView.height - 55
@@ -54,17 +54,17 @@ class ExploreUserCollectionViewCell: UICollectionViewCell {
             height: 55
         )
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         userNameLabel.text = nil
         profilePicture.image = nil
     }
-    
+
     func configure(with viewModel: ExploreUserViewModel) {
         userNameLabel.text = viewModel.username
-        
+
         profilePicture.image = viewModel.profilePicture
-        
+
     }
 }

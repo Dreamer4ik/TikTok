@@ -10,11 +10,11 @@ import UIKit
 
 /// Delegate interface to notify
 protocol ExploreManagerDelegate: AnyObject {
-    
+
     /// Notify a view controller should be pushed
     /// - Parameter vc: The view controller to present
     func pushViewController(_ vc: UIViewController)
-    
+
     /// Notify a hashtag element was tapped
     /// - Parameter hashtag: The hashtag that was tapped
     func didTapHashtag(_ hashtag: String)
@@ -22,13 +22,13 @@ protocol ExploreManagerDelegate: AnyObject {
 
 /// Manager that handles explore view content
 final class ExploreManager {
-    
+
     /// Shared singletion instance
     public static let shared = ExploreManager()
-    
+
     /// Delegate to notify of events
     weak var delegate: ExploreManagerDelegate?
-    
+
     /// Represents banner action type
     enum BannerAction: String {
         /// Post type
@@ -38,7 +38,7 @@ final class ExploreManager {
         /// Creator type
         case user
     }
-    
+
     // MARK: - Public
     /// Gets explore data for banner
     /// - Returns: Returns collection of models
@@ -114,7 +114,7 @@ final class ExploreManager {
                 }
             }
         })
-        
+
     }
     /// Gets explore data for trending posts
     /// - Returns: Returns collection of models
@@ -163,7 +163,7 @@ final class ExploreManager {
             }
         })
     }
-    
+
     /// Gets explore data for popular posts
     /// - Returns: Returns collection of models
     public func getExplorePopularPosts() -> [ExplorePostViewModel] {
@@ -185,14 +185,13 @@ final class ExploreManager {
                                                                  )))
                     self?.delegate?.pushViewController(vc)
                 }
-                
+
             }
         })
     }
-    
-    
+
     // MARK: - Private
-    
+
     /// Parse explore JSON data
     /// - Returns: Returns a optional response model
     private func parseExploreData() -> ExploreResponse? {
@@ -203,8 +202,7 @@ final class ExploreManager {
             let url = URL(fileURLWithPath: path)
             let data = try Data(contentsOf: url)
             return try JSONDecoder().decode(ExploreResponse.self, from: data)
-        }
-        catch {
+        } catch {
             print(error)
             return nil
         }
@@ -246,5 +244,3 @@ struct Creator: Codable {
     let username: String
     let followers_count: Int
 }
-
-
