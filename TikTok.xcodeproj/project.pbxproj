@@ -62,6 +62,11 @@
 		DFD2D33E281E96DD0078F5BA /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2D33D281E96DD0078F5BA /* RecordButton.swift */; };
 		DFD2D340281EA10F0078F5BA /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2D33F281EA10F0078F5BA /* CaptionViewController.swift */; };
 		DFE03D12281DCFFC00029552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */; };
+		DFE143A42828471C00CD26FE /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE143A32828471C00CD26FE /* ExploreResponse.swift */; };
+		DFE143A62828475000CD26FE /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE143A52828475000CD26FE /* Banner.swift */; };
+		DFE143A82828476400CD26FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE143A72828476400CD26FE /* Post.swift */; };
+		DFE143AA2828477100CD26FE /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE143A92828477100CD26FE /* Hashtag.swift */; };
+		DFE143AC2828477F00CD26FE /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE143AB2828477F00CD26FE /* Creator.swift */; };
 		DFF4D44A2823B27000D97088 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4D4492823B27000D97088 /* ProfileHeaderCollectionReusableView.swift */; };
 		F7330DA525D86B6F2FB8BC95 /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3ACAF6733AB8FFA5607C0 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +132,11 @@
 		DFD2D33D281E96DD0078F5BA /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		DFD2D33F281EA10F0078F5BA /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		DFE03D11281DCFFC00029552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFE143A32828471C00CD26FE /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
+		DFE143A52828475000CD26FE /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		DFE143A72828476400CD26FE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DFE143A92828477100CD26FE /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
+		DFE143AB2828477F00CD26FE /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		DFF4D4492823B27000D97088 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +267,11 @@
 				DFC719E328210CD200E6F87A /* Notifications.swift */,
 				DF97B4582826E3F3003C45C1 /* SettingsSection.swift */,
 				DF97B45A2826E407003C45C1 /* SettingsOption.swift */,
+				DFE143A32828471C00CD26FE /* ExploreResponse.swift */,
+				DFE143A52828475000CD26FE /* Banner.swift */,
+				DFE143AB2828477F00CD26FE /* Creator.swift */,
+				DFE143A72828476400CD26FE /* Post.swift */,
+				DFE143A92828477100CD26FE /* Hashtag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -541,15 +556,19 @@
 				DFCDD2C028107BED00D9E8A6 /* AuthManager.swift in Sources */,
 				DFCC7D522818143D00BE7707 /* ExploreHashtagCollectionViewCell.swift in Sources */,
 				DF8BD247281466DF005C2C99 /* User.swift in Sources */,
+				DFE143AA2828477100CD26FE /* Hashtag.swift in Sources */,
 				DFF4D44A2823B27000D97088 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				DFCDD2B428107A7D00D9E8A6 /* TabBarViewController.swift in Sources */,
 				DFC719EC28211B3800E6F87A /* NotificationsPostCommentTableViewCell.swift in Sources */,
 				DFCDD28C2810728600D9E8A6 /* HomeViewController.swift in Sources */,
 				DFD2D33E281E96DD0078F5BA /* RecordButton.swift in Sources */,
 				DFCDD2B0281079F700D9E8A6 /* SignUpViewController.swift in Sources */,
+				DFE143AC2828477F00CD26FE /* Creator.swift in Sources */,
 				DFCDD2A82810796800D9E8A6 /* NotificationsViewController.swift in Sources */,
 				DF8BD24528146690005C2C99 /* PostComment.swift in Sources */,
+				DFE143A62828475000CD26FE /* Banner.swift in Sources */,
 				DFCDD2AE281079E700D9E8A6 /* SignInViewController.swift in Sources */,
+				DFE143A42828471C00CD26FE /* ExploreResponse.swift in Sources */,
 				DF9E96812811E39D00D88A11 /* PostModel.swift in Sources */,
 				DF97B4552826DBF2003C45C1 /* SwitchTableViewCell.swift in Sources */,
 				DFCC7D4E2818141300BE7707 /* ExplorePostCollectionViewCell.swift in Sources */,
@@ -557,6 +576,7 @@
 				DFCDD2BC28107B7B00D9E8A6 /* StorageManager.swift in Sources */,
 				DFCDD2882810728600D9E8A6 /* AppDelegate.swift in Sources */,
 				DFCDD28A2810728600D9E8A6 /* SceneDelegate.swift in Sources */,
+				DFE143A82828476400CD26FE /* Post.swift in Sources */,
 				DF97B4592826E3F3003C45C1 /* SettingsSection.swift in Sources */,
 				DF1C062928170BAF00A344CB /* ExploreSectionType.swift in Sources */,
 			);

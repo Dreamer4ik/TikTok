@@ -2,5 +2,7 @@ disabled_rules:
   - identifier_name
   - file_length
   - type_body_length
+  - trailing_whitespace
+  - line_length
 
 

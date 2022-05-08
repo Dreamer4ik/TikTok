@@ -5,6 +5,7 @@
 //  Created by Ivan Potapenko on 20.04.2022.
 //
 
+import Appirater
 import UIKit
 import SafariServices
 
@@ -30,6 +31,33 @@ class SettingsViewController: UIViewController {
                 options: [
                     SettingsOption(title: "Save Videos", handler: {
 
+                    })
+
+                ]
+            ),
+            
+            SettingsSection(
+                title: "Enjoying the app?",
+                options: [
+                    SettingsOption(title: "Rate App", handler: {
+//                        if app published
+//                        UIApplication.shared.open(URL(string: "")!, options: [:], completionHandler: nil)
+                        DispatchQueue.main.async {
+                            Appirater.tryToShowPrompt()
+                        }
+                    }),
+                    
+                    SettingsOption(title: "Share App", handler: { [weak self] in
+                       
+                        DispatchQueue.main.async {
+                            guard let url = URL(string: "https://www.facebook.com") else {
+                                return
+                            }
+                            let vc = UIActivityViewController(
+                                activityItems: [url],
+                                applicationActivities: [])
+                            self?.present(vc, animated: true, completion: nil)
+                        }
                     })
 
                 ]

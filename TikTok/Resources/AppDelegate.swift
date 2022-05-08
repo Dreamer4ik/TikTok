@@ -5,6 +5,7 @@
 //  Created by Ivan Potapenko on 20.04.2022.
 //
 
+import Appirater
 import UIKit
 import Firebase
 
@@ -14,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        Appirater.appLaunched(true)
+        Appirater.setDebug(false)
+        Appirater.setAppId("34882823481234781")
+        Appirater.setDaysUntilPrompt(7)
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
 
         window.rootViewController = TabBarViewController()
@@ -21,10 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
 
         FirebaseApp.configure()
-
-//        AuthManager.shared.signOut { _ in
-//
-//        }
 
         return true
     }
