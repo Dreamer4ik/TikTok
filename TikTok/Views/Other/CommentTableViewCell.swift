@@ -37,6 +37,8 @@ class CommentTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         clipsToBounds = true
+        backgroundColor = .secondarySystemBackground
+        contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubview(avatarImageView)
         contentView.addSubview(commentLabel)
         contentView.addSubview(dateLabel)
