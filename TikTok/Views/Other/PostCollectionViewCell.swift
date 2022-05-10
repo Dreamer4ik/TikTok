@@ -46,6 +46,8 @@ class PostCollectionViewCell: UICollectionViewCell {
                 case .success(let url):
                     let asset = AVAsset(url: url)
                     let generator = AVAssetImageGenerator(asset: asset)
+                    // set orientation which you really see in the player
+                    generator.appliesPreferredTrackTransform = true
                     do {
                         let cgImage = try generator.copyCGImage(at: .zero, actualTime: nil)
                         self.imageView.image = UIImage(cgImage: cgImage)

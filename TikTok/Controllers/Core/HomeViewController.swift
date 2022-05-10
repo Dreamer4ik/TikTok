@@ -19,10 +19,12 @@ class HomeViewController: UIViewController {
 
     let control: UISegmentedControl = {
         let titles = ["Following", "For You"]
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         let control = UISegmentedControl(items: titles)
         control.selectedSegmentIndex = 1
         control.backgroundColor = nil
         control.selectedSegmentTintColor = .white
+        control.setTitleTextAttributes(titleTextAttributes, for: .selected)
         return control
     }()
 

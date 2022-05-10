@@ -16,3 +16,20 @@ target 'TikTok' do
   pod 'SwiftLint'
 
 end
+
+target 'TikTokTests' do
+  use_frameworks!
+
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+
+  pod 'Appirater'
+  pod 'SDWebImage'
+  pod 'ProgressHUD'
+  pod 'SwiftLint'
+
+end

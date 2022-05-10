@@ -81,11 +81,15 @@ class ProfileViewController: UIViewController {
         }
         fetchPosts()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchPosts()
+    }
 
     private func fetchPosts() {
         DatabaseManager.shared.getPosts(for: user) { [weak self] postModels in
             DispatchQueue.main.async {
-                self?.posts = postModels
+                self?.posts = postModels.reversed()
                 self?.collectionView.reloadData()
             }
         }
