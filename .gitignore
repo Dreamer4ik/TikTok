@@ -1,0 +1,5 @@
+# Exclude Pods folder
+Pods/
+
+# Exclude Xcode workspace file
+*.xcworkspace
